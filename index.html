@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3-Month Learning Pathway</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+
+  <div class="app">
+    <header class="header">
+      <div class="header-top">
+        <h1>3-Month Learning Pathway</h1>
+
+        <button id="theme-toggle" class="theme-toggle">
+          🌙 Dark
+        </button>
+      </div>
+
+      <p>Choose a course, follow each week, complete tasks, quizzes, and watch your progress grow.</p>
+
+      <div class="view-toggle">
+        <button id="grid-view" class="active">Grid View</button>
+        <button id="scroll-view">Scroll View</button>
+      </div>
+
+      <div class="course-filter">
+        <button class="course-btn active" data-course="fullstack">Full Stack</button>
+        <button class="course-btn" data-course="datascience">Data Science</button>
+        <button class="course-btn" data-course="cybersecurity">Cybersecurity</button>
+      </div>
+
+      
+      <div class="progress-wrapper">
+
+  <!-- STATUS BUTTON -->
+  <button id="week-status-btn" class="status-btn status-not-started">
+    Not Started
+  </button>
+
+  <div class="progress-label">
+    Overall Progress: <span id="progress-percent">0%</span>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+</div>
+
+
+    </header>
+
+    <main class="timeline"></main>
+  </div>
+
+  <!-- DAILY TASK POPUP -->
+  <div class="daily-popup-backdrop" id="daily-popup-backdrop">
+    <div class="daily-popup" id="daily-popup">
+      <div class="daily-popup-header">
+        <div>
+          <h2 id="daily-popup-title">Week X – Daily Tasks</h2>
+          <p id="daily-popup-subtitle">Stay consistent with focused daily actions.</p>
+        </div>
+        <button class="daily-popup-close" id="daily-popup-close">&times;</button>
+      </div>
+
+      <div class="daily-days-wrapper">
+        <div class="daily-days" id="daily-days"></div>
+      </div>
+
+      <div class="daily-popup-footer">
+        <button class="daily-popup-close-btn" id="daily-popup-close-btn">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIZ POPUP -->
+  <div class="daily-popup-backdrop" id="quiz-popup-backdrop">
+    <div class="daily-popup" id="quiz-popup">
+      <div class="daily-popup-header">
+        <div>
+          <h2 id="quiz-popup-title">Week X – Quiz</h2>
+          <p id="quiz-popup-subtitle">Test your understanding with short-answer questions.</p>
+        </div>
+        <button class="daily-popup-close" id="quiz-popup-close">&times;</button>
+      </div>
+
+      <div class="daily-days-wrapper">
+        <div class="daily-days" id="quiz-content"></div>
+      </div>
+
+      <div class="daily-popup-footer">
+        <button class="daily-popup-close-btn" id="quiz-popup-close-btn">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LONG NOTE POPUP -->
+  <div class="daily-popup-backdrop" id="note-popup-backdrop">
+    <div class="daily-popup" id="note-popup">
+      <div class="daily-popup-header">
+        <div>
+          <h2 id="note-popup-title">Week Notes</h2>
+          <p id="note-popup-subtitle">Detailed explanation for this week.</p>
+        </div>
+        <button class="daily-popup-close" id="note-popup-close">&times;</button>
+      </div>
+
+      <div class="daily-days-wrapper">
+        <div class="daily-days" id="note-content"></div>
+      </div>
+
+      <div class="daily-popup-footer">
+        <button class="daily-popup-close-btn" id="note-popup-close-btn">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAILY TASK NOTE POPUP -->
+  <div class="daily-popup-backdrop" id="task-note-popup-backdrop">
+    <div class="daily-popup" id="task-note-popup">
+      <div class="daily-popup-header">
+        <div>
+          <h2 id="task-note-title">Task Notes</h2>
+          <p id="task-note-subtitle">Explanation for this daily task.</p>
+        </div>
+        <button class="daily-popup-close" id="task-note-close">&times;</button>
+      </div>
+
+      <div class="daily-days-wrapper">
+        <div class="daily-days" id="task-note-content"></div>
+      </div>
+
+      <div class="daily-popup-footer">
+        <button class="daily-popup-close-btn" id="task-note-close-btn">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK VIDEO POPUP -->
+  <div class="daily-popup-backdrop" id="video-popup-backdrop">
+    <div class="daily-popup video-popup" id="video-popup">
+      <div class="daily-popup-header">
+        <div>
+          <h2 id="video-popup-title">Week Video</h2>
+          <p id="video-popup-subtitle">Watch the lesson for this week.</p>
+        </div>
+        <button class="daily-popup-close" id="video-popup-close">&times;</button>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe id="video-frame" src="" allowfullscreen></iframe>
+      </div>
+
+      <div class="daily-popup-footer">
+        <button class="daily-popup-close-btn" id="video-popup-close-btn">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
